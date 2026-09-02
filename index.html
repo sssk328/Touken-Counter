@@ -385,7 +385,7 @@ const PERMANENT_NAMES = new Set([
   "雲重","柏太刀","波平行安","狐ヶ崎"
 ]);
 
-const CARD_PRESETS = ["#f2ead9","#e3b7d4","#a3b4d3","#bbd6c3","#f7ca81","#c9c4e8","#e8dfb1","#dae3d0"];
+const CARD_PRESETS = ["#f2ead9","#e3b7d4","#a3b4d3","#bbd6c3","#f7ca81","#c9c4e8","#e8dfb1"];
 
 /* =====================================================
    状態管理・永続化
@@ -984,18 +984,18 @@ function renderCreateTitle(){
   appEl.innerHTML =
     '<div class="screen-topbar">'+
       '<button class="back-btn" data-action="back-to-home">←</button>'+
-      '<div class="screen-title">新しい催物</div>'+
+      '<div class="screen-title">新規作成</div>'+
     '</div>'+
     '<div class="screen-body">'+
-      '<div class="field-label">催物タイトル</div>'+
-      '<input class="text-input" id="create-title-input" placeholder="例）2026夏イベント" value="'+esc(CREATE.title)+'">'+
+      '<div class="field-label">タイトル</div>'+
+      '<input class="text-input" id="create-title-input" placeholder="例）ちよこ大作戦2026" value="'+esc(CREATE.title)+'">'+
       '<div class="field-label">カードの色</div>'+
       '<div class="color-swatches">'+swatches+'</div>'+
       '<div class="color-custom-row">'+
         '<input type="color" id="custom-color-input" value="'+CREATE.color+'">'+
         '<label>カスタムカラーを選ぶ</label>'+
       '</div>'+
-      '<button class="primary-btn" data-action="go-create-select">次へ（刀剣男士を選択）</button>'+
+      '<button class="primary-btn" data-action="go-create-select">刀剣男士の選択へ</button>'+
     '</div>';
   const cc = document.getElementById("custom-color-input");
   cc.addEventListener("input",(e)=>{ CREATE.color = e.target.value; render(); document.getElementById("create-title-input").focus(); });
