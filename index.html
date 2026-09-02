@@ -888,7 +888,7 @@ function renderHome(){
       '<button class="icon-btn" data-action="go-settings">'+ICON_GEAR+'</button>'+
     '</div>'+
     '<div class="group-list">'+
-      (cards || '<div class="empty-state">まだカウンターグループがありません。<br>右下の＋ボタンから催物を作成しましょう。</div>')+
+      (cards || '<div class="empty-state">カウンターグループがありません<br>右下の＋ボタンから作成してください</div>')+
     '</div>'+
     '<button class="fab" data-action="go-create-title">＋</button>';
 }
@@ -901,7 +901,7 @@ function renderGroupView(){
 
   let itemsHtml = "";
   if(g.counters.length===0){
-    itemsHtml = '<div class="empty-state" style="grid-column:1/-1;">カウンターがまだありません。<br>下のボタンから刀剣男士を追加してください。</div>';
+    itemsHtml = '<div class="empty-state" style="grid-column:1/-1;">カウンターがありません<br>刀剣男士を追加してください</div>';
   }else if(isGrid){
     itemsHtml = g.counters.map(c=>{
       const tc = contrastText(c.color);
